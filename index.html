@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide bar</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="crud">
+    <div class="head">
+      <h1>Cruds</h1>
+      <p>create read update delete search</p>
+    </div>
+      <div class="inputs">
+        <input type="text" placeholder="title" id="title" placeholder="Search">
+        <div class="price">
+          <input onkeyup="gettotal()" type="number" placeholder="price" id="price">
+          <input onkeyup="gettotal()" type="number" placeholder="takes" id="takes">
+          <input onkeyup="gettotal()" type="number" placeholder="ads" id="ads">
+          <input onkeyup="gettotal()" type="number" placeholder="discount" id="discount">
+          <small id="total"></small>
+        </div>
+        <input type="number" placeholder="count" id="count">
+        <input type="text" placeholder="category" id="category">
+        <button id="submit">Create</button>
+      </div>
+    <div class="outputs">
+      <div class="searchblock">
+        <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="Search">
+        <div class="btnSearch">
+          <button onclick="getsearch(this.id)" id="searchtitle">Search By Title</button>
+          <button onclick="getsearch(this.id)" id="searchcategory">Search By Category</button>
+          <button onclick="getsearch(this.id)" id="searchPrice">Search By Price</button>
+        </div>
+      </div>
+    </div>
+    <div id="deleteAll"></div>
+    <table>
+      <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>price</th>
+        <th>taxes</th>
+        <th>ads</th>
+        <th>discount</th>
+        <th>total</th>
+        <th>count</th>
+        <th>category</th>
+        <th>update</th>
+        <th>delete</th>
+      </tr>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+	<script src="js.js"></script>
+</body>
+</html>

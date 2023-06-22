@@ -1,0 +1,150 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #222;
+  color: #fff;
+  font-family: system-ui;
+}
+.crud {
+  width: 70%;
+  margin: auto;
+  /* background-color: skyblue; */
+}
+@media (max-width: 1000px) {
+  .crud {
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 10px 10px; */
+  }
+}
+@media (max-width: 600px) {
+  #searchPrice {
+    width: 100%;
+  }
+  .btnSearch button:nth-child(1),
+  .btnSearch button:nth-child(2) {
+    width: calc(50% - 2px);
+  }
+}
+.crud h1,
+.crud p {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px 0;
+  word-spacing: 5px;
+  font-style: italic;
+}
+input {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: #111;
+  margin: 4px 0;
+  padding: 20px 10px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 15px;
+}
+input:focus {
+  background: #000;
+  transform: scale(1.025);
+}
+.price{
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  gap:0px 10px;
+}
+.price input {
+  flex-wrap: wrap;
+  width:calc(33.333333333% - 8px);
+}
+#total {
+  padding: 10px;
+  background-color: rgb(6, 69, 69);
+  border-radius: 4px;
+  font-size: 16px;
+}
+#total::before {
+  content: "Total : ";
+}
+button {
+  width: 100%;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(6, 69, 69);
+  font-size:medium;
+  font-style: italic;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: .5s;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+button:hover {
+  background-color: aqua;
+  color: #000;
+  /* letter-spacing: 2px; */
+}
+.btnSearch {
+  display: flex;
+  justify-content: space-between;
+  gap: 3px 2px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.btnSearch button {
+  width: calc(33.3333% - 5px);
+}
+table {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  
+}
+table th {
+  text-transform: uppercase;
+  border: 1px solid #fff;
+}
+th,td {
+  padding: 5px;
+}
+td {
+  border-bottom: 1px solid;
+}
+#deleteAll {
+  margin: 10px 0;
+}
+#deleteAll button:hover {
+  background-color: rgb(174, 55, 55);
+}
+@media (max-width: 748px) {
+  table th {
+    font-size: 9px;
+    margin: 0px;
+    padding: 5px 0;
+  }
+  th,td {
+    padding: 0;
+    font-size: 9px;
+  }
+}
+@media (max-width: 600px) {
+  table th {
+    font-size: 5px;
+    margin: 0px;
+    padding: 3px 0;
+  }
+  th,td {
+    padding: 0;
+    font-size: 6px;
+  }
+}
